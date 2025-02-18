@@ -8,7 +8,6 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 
-
 int main()
 {
 	if (!glfwInit()) {
@@ -43,15 +42,14 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT);
 		glColor3f(0.3, 0.6, 0.1);
 		glBegin(GL_POLYGON);
-		/*Координаты вершин*/
+		/*ГЉГ®Г®Г°Г¤ГЁГ­Г ГІГ» ГўГҐГ°ГёГЁГ­*/
 		for (int i = 0; i < 5; i++) {
 			float angle = 2 * M_PI * i / 5 + M_PI / 2;
 			float x = R * cos(angle);
 			float y = R * sin(angle);
 			glVertex2f(x, y);
 		}
-
-		/*Конец координат вершин*/
+		/*ГЉГ®Г­ГҐГ¶ ГЄГ®Г®Г°Г¤ГЁГ­Г ГІ ГўГҐГ°ГёГЁГ­*/
 		glEnd();
 		glfwSwapBuffers(window);
 		glfwPollEvents();
